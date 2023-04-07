@@ -1,0 +1,16 @@
+certifi==2018.1.18
+Django
+django-cors-headers
+djangorestframework
+idna==2.6
+pytz==2017.3
+requests
+django-rest-swagger
+django-crispy-forms
+django-formtools==2.1
+django-import-export==1.0.0
+django-reversion==2.0.13
+python-crontab
+XlsxWriter==1.0.5
+django-suit
+PyMySQL

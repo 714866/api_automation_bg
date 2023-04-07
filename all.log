@@ -1,0 +1,721 @@
+2023-03-07 17:06:53,565,19912,django.request,ERROR,log.py:241,Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 54, in render
+    self.set_context(data, renderer_context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 68, in set_context
+    renderer_context['spec'] = OpenAPIRenderer().render(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 34, in render
+    return OpenAPICodec().encode(data, **options)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework_swagger\renderers.py", line 16, in encode
+    raise TypeError('Expected a `coreapi.Document` instance')
+TypeError: Expected a `coreapi.Document` instance
+2023-03-07 17:06:53,569,19912,django.server,ERROR,basehttp.py:187,"GET /docs/ HTTP/1.1" 500 113294
+2023-03-07 17:28:36,448,18832,django.request,ERROR,log.py:241,Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 140, in get
+    'schema_url': self._get_schema_url(request),
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 154, in _get_schema_url
+    schema_url = self.url or get_relative_url(reverse(self.url_name, request=request))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'schema' not found. 'schema' is not a valid view function or pattern name.
+2023-03-07 17:28:36,453,18832,django.server,ERROR,basehttp.py:187,"GET /docs/ HTTP/1.1" 500 120456
+2023-03-07 17:35:03,380,18136,django.request,ERROR,log.py:241,Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 140, in get
+    'schema_url': self._get_schema_url(request),
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 154, in _get_schema_url
+    schema_url = self.url or get_relative_url(reverse(self.url_name, request=request))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'schema' not found. 'schema' is not a valid view function or pattern name.
+2023-03-07 17:35:03,385,18136,django.server,ERROR,basehttp.py:187,"GET /docs/ HTTP/1.1" 500 120164
+2023-03-07 17:46:06,634,20404,django.request,ERROR,log.py:241,Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 140, in get
+    'schema_url': self._get_schema_url(request),
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\drf_spectacular\views.py", line 154, in _get_schema_url
+    schema_url = self.url or get_relative_url(reverse(self.url_name, request=request))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 47, in reverse
+    url = _reverse(viewname, args, kwargs, request, format, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\reverse.py", line 60, in _reverse
+    url = django_reverse(viewname, args=args, kwargs=kwargs, **extra)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'schema' not found. 'schema' is not a valid view function or pattern name.
+2023-03-07 17:46:06,640,20404,django.server,ERROR,basehttp.py:187,"GET /docs/ HTTP/1.1" 500 120738
+2023-03-08 10:06:57,968,19488,django.request,ERROR,log.py:241,Internal Server Error: /mock/asd
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 483, in post
+    obj = ApiInfo.objects.get(apiAddress=url, mockStatus=True)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+2023-03-08 10:06:57,982,19488,django.server,ERROR,basehttp.py:187,"POST /mock/asd HTTP/1.1" 500 233344
+2023-03-08 10:27:04,492,11744,django.request,ERROR,log.py:241,Internal Server Error: /mock/sd
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 483, in post
+    obj = ApiInfo.objects.get(apiAddress=url, mockStatus=True)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+2023-03-08 10:27:04,501,11744,django.server,ERROR,basehttp.py:187,"POST /mock/sd HTTP/1.1" 500 233269
+2023-03-08 10:35:11,419,11744,django.request,ERROR,log.py:241,Internal Server Error: /mock/sd
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 483, in post
+    obj = ApiInfo.objects.get(apiAddress=url, mockStatus=True)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+2023-03-08 10:35:11,426,11744,django.server,ERROR,basehttp.py:187,"POST /mock/sd HTTP/1.1" 500 232917
+2023-03-08 10:53:39,796,21980,django.request,ERROR,log.py:241,Internal Server Error: /mock/sd
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 484, in post
+    obj = ApiInfo.objects.get(apiAddress=url, mockStatus=True)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 646, in get
+    num = len(clone)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 1867, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_apiinfo' doesn't exist")
+2023-03-08 10:53:39,806,21980,django.server,ERROR,basehttp.py:187,"POST /mock/sd HTTP/1.1" 500 233269
+2023-03-08 14:36:08,427,18136,django.request,ERROR,log.py:241,Internal Server Error: /mock/1
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 483, in post
+    url2 = "/"+apiAdr2
+TypeError: can only concatenate str (not "NoneType") to str
+2023-03-08 14:36:08,431,18136,django.server,ERROR,basehttp.py:187,"POST /mock/1 HTTP/1.1" 500 98175
+2023-03-10 14:26:48,237,16784,django.request,ERROR,log.py:241,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_project' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\projectList.py", line 43, in get
+    total = paginator.num_pages  # 总页数
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_project' doesn't exist")
+2023-03-10 14:26:48,257,16784,django.server,ERROR,basehttp.py:187,"GET /api/project/project_list HTTP/1.1" 500 230929
+2023-03-10 14:27:01,897,16784,django.request,ERROR,log.py:241,Internal Server Error: /api/project/project_list
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'ews.api_test_project' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\exception.py", line 56, in inner
+    response = get_response(request)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\decorators\csrf.py", line 55, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "F:\myCode\api_automation_test\api_test\api\projectList.py", line 43, in get
+    total = paginator.num_pages  # 总页数
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\paginator.py", line 102, in num_pages
+    if self.count == 0 and not self.allow_empty_first_page:
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\utils\functional.py", line 57, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\core\paginator.py", line 96, in count
+    return c()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\query.py", line 621, in count
+    return self.query.get_count(using=self.db)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\query.py", line 559, in get_count
+    return obj.get_aggregation(using, ["__count"])["__count"]
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\query.py", line 544, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\django\db\backends\mysql\base.py", line 75, in execute
+    return self.cursor.execute(query, args)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 148, in execute
+    result = self._query(query)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\cursors.py", line 310, in _query
+    conn.query(q)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 775, in _read_query_result
+    result.read()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\pymysql\err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'ews.api_test_project' doesn't exist")
+2023-03-10 14:27:01,902,16784,django.server,ERROR,basehttp.py:187,"GET /api/project/project_list HTTP/1.1" 500 230961
+2023-04-06 16:26:17,178,11236,root,ERROR,ApiDoc.py:559,Invalid URL '12': No scheme supplied. Perhaps you meant https://12?
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 556, in post
+    swagger_api(data["url"], data["project_id"], request.user)
+  File "F:\myCode\api_automation_test\api_test\common\loadSwaggerApi.py", line 25, in swagger_api
+    req = requests.get(url)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\sessions.py", line 573, in request
+    prep = self.prepare_request(req)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\sessions.py", line 484, in prepare_request
+    p.prepare(
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL '12': No scheme supplied. Perhaps you meant https://12?
+2023-04-06 16:27:47,598,11236,root,ERROR,ApiDoc.py:559,Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\simplejson\__init__.py", line 525, in loads
+    return _default_decoder.decode(s)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\simplejson\decoder.py", line 372, in decode
+    obj, end = self.raw_decode(s)
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\simplejson\decoder.py", line 402, in raw_decode
+    return self.scan_once(s, idx=_w(s, idx).end())
+simplejson.errors.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\myCode\api_automation_test\api_test\api\ApiDoc.py", line 556, in post
+    swagger_api(data["url"], data["project_id"], request.user)
+  File "F:\myCode\api_automation_test\api_test\common\loadSwaggerApi.py", line 26, in swagger_api
+    data = req.json()
+  File "F:\myCode\api_automation_test\venv\lib\site-packages\requests\models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
